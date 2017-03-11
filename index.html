@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Scheduler</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+	<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+	<div class="container">
+
+		<div class="jumbotron mainHeader">
+			<h1><i class = "fa fa-newspaper-o spacer">All Aboard da Pain Train</h1> 
+			<h2>Destination ur mom's house</h2>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Current Train Schedule</h3>
+			</div>
+			<div class="panel-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						
+					<table class="table table-striped" id="trainSchedule">
+ 						<th class = "col-md-2">Train Name </th> 
+ 						<th class = "col-md-2">Destination </th>
+ 						<th class = "col-md-2">Frequency (min) </th>
+ 						<th class = "col-md-2">Next Arrival </th> 
+ 						<th class = "col-md-2">Minutes Away </th> 
+ 						
+						</table>
+
+						
+						
+					</div>
+					
+				</form>
+			</div>
+		</div>
+			<div class="panel panel-default" style ="margin-top: 10px">
+				<div class="panel-heading">
+					<h3 class="panel-title">Add Train</h3>
+				</div>
+				<div class="panel-body"> 
+				<form>
+				<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Train Name</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="trainName" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Destination
+						</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="destination">
+						</div>
+					</div> 
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">First Train Time</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="trainTime" >
+						</div>
+					</div> 
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Frequency (min)</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="frequency" >
+						</div>
+					</div> 
+					
+					<button type="button" class="btn btn-primary" id="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+			<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
